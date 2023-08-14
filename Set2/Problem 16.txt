@@ -1,0 +1,16 @@
+**Problem 16:**
+
+{
+  "_id": ObjectId(), 
+  "name": String,
+  "cuisine_type": String,
+  "location": String,
+  "average_rating": Number,
+  "delivery_available": Boolean
+}
+
+- **Prerequisite**: Understand creating tables in SQL / collections in MongoDB
+- **Problem**: Create a **`Restaurants`** table / collection with the fields defined above.
+
+
+NA

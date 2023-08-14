@@ -1,0 +1,40 @@
+**Problem 23:**
+
+- **Prerequisite**: Understand how to use the AVG function in SQL / MongoDB's aggregate functions
+- **Problem**: Write a query to calculate the average **`average_rating`** of all restaurants.
+
+
+
+db.Restaurants.aggregate([
+  {
+    $group: {
+      _id: null,
+      avgAverageRating: { $avg: "$average_rating" }
+    }
+  }
+])
+
+The $group stage groups all documents into a single group (using _id: null) to perform aggregation operations on the entire collection.
+The $avg operator calculates the average of the average_rating field within the grouped documents.
+
+
+
+
+db.Restaurants.aggregate([
+  {
+    $group: {
+      _id: null,
+      totalRatings: { $sum: "$average_rating" },
+      count: { $sum: 1 }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      avgAverageRating: { $divide: ["$totalRatings", "$count"] }
+    }
+  }
+])
+
+The first $group stage groups all documents into a single group (using _id: null) and calculates the total sum of average_rating values (totalRatings) and counts the number of documents (count).
+The $project stage then calculates the average by dividing the totalRatings by the count.

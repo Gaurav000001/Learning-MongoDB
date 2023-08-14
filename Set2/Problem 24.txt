@@ -1,0 +1,9 @@
+**Problem 24:**
+
+- **Prerequisite**: Understand how to limit results in SQL / MongoDB
+- **Problem**: Write a query to fetch the top 5 restaurants when ordered by **`average_rating`** in 
+descending order.
+
+
+
+db.Restaurants.find({}).sort({average_rating: -1}).limit(5)

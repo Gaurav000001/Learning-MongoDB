@@ -1,0 +1,10 @@
+**Problem 21:**
+
+- **Prerequisite**: Understand how to count rows / documents in SQL / MongoDB
+- **Problem**: Write a query to count the number of restaurants that have **`delivery_available`**.
+
+
+
+db.Restaurants.countDocuments({
+    delivery_available: true
+})

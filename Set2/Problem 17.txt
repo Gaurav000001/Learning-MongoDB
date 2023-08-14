@@ -1,0 +1,52 @@
+**Problem 17:**
+
+- **Prerequisite**: Understand inserting data into SQL tables / MongoDB collections
+- **Problem**: Insert five rows / documents into the **`Restaurants`** table / collection with data of your choice.
+
+
+{
+  "_id": ObjectId(), 
+  "name": String,
+  "cuisine_type": String,
+  "location": String,
+  "average_rating": Number,
+  "delivery_available": Boolean
+}
+
+db.Restaurants.insertMany([
+  {
+    name: "La Trattoria",
+    cuisine_type: "Italian",
+    location: "Rome",
+    average_rating: 4.5,
+    delivery_available: true
+  },
+  {
+    name: "El Mariachi",
+    cuisine_type: "Mexican",
+    location: "Mexico City",
+    average_rating: 4.0,
+    delivery_available: true
+  },
+  {
+    name: "Peking Garden",
+    cuisine_type: "Chinese",
+    location: "Beijing",
+    average_rating: 4.2,
+    delivery_available: false
+  },
+  {
+    name: "Spice of India",
+    cuisine_type: "Indian",
+    location: "Mumbai",
+    average_rating: 4.8,
+    delivery_available: true
+  },
+  {
+    name: "Sushi Sora",
+    cuisine_type: "Japanese",
+    location: "Tokyo",
+    average_rating: 4.6,
+    delivery_available: true
+  }
+]);

@@ -1,0 +1,8 @@
+**Problem 25:**
+
+- **Prerequisite**: Understand data deletion in SQL / MongoDB
+- **Problem**: Write a query to delete the restaurant with **`id`** 3.
+
+
+
+db.Restaurants.deleteOne({_id: ObjectId("64da413dbb6884b6af1913fc")})
