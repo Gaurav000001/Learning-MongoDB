@@ -1,0 +1,12 @@
+**Problem 15:**
+
+- **Prerequisite**: Understand how to use NULL checks in SQL / MongoDB
+- **Problem**: Write a query to fetch all customers where the **`phone_number`** field is not set or is null.
+
+
+db.Customers.find({
+  $or: [
+    { phone_number: { $exists: false } },
+    { phone_number: null }
+  ]
+})

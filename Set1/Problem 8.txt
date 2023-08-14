@@ -1,0 +1,18 @@
+**Problem 8:**
+
+- **Prerequisite**: Understand data updating in SQL / MongoDB
+- **Problem**: Write a query to update the **`address`** of the customer with **`id`** 4.
+
+*********************   Compass   **********************
+1. Locate the document with _id value of 4, and click on it to open the document editor.
+
+2. In the document editor, find the "address" field and update its value with the new address you want.
+
+3. Once you've made the necessary changes, click the "Save" button to save the updated document.
+
+*******************   MongoDB Shell   **********************
+
+db.Customers.updateOne(
+   { _id: ObjectId("64d9cde7321d067f0e57eb2b") },
+   { $set: { address: "Chandigarh" } }
+)

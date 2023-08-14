@@ -1,0 +1,18 @@
+**Problem 13:**
+
+- **Prerequisite**: Understand filtering with multiple conditions in SQL / MongoDB
+- **Problem**: Write a query to fetch all customers whose **`id`** is greater than 2 and **`name`** starts with 'B'.
+
+
+NOTE: by default MongoDB takes multiple conditions with AND
+
+db.Customers.find({
+    _id: {$gt: 2},
+    name: {$regex: /^B/i}
+})
+
+
+
+
+
+

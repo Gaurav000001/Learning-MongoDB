@@ -1,0 +1,34 @@
+**Problem 6:**
+
+- **Prerequisite**: Understand using string patterns in SQL (LIKE clause) / using regex in MongoDB
+- **Problem**: Write a query to fetch all customers whose **`name`** starts with 'A'.
+
+
+*********************   Compass   **********************
+db.Customers.find({ name: { $regex: /^A/i } })
+
+db.Customers.find({ name: { $regex: /A$/i } })
+
+db.Customers.find({ name: { $regex: /A/i } })
+
+
+*******************   MongoDB Shell   **********************
+NOTE: including "{$regex: }" is optional
+
+* Write a query to fetch all customers whose **`name`** starts with 'A'.
+db.Customers.find({ name: { $regex: /^A/ } })
+
+* Write a query to fetch all customers whose **`name`** ends with 'A'.
+db.Customers.find({ name: { $regex: /A$/ } })
+
+* Write a query to fetch all customers whose **`name`** contains 'A' anywhere.
+db.Customers.find({ name: { $regex: /A/ } })
+
+
+####  Case Insensitive Searches for all above three queries
+
+db.Customers.find({ name: { $regex: /^A/i } })
+
+db.Customers.find({ name: { $regex: /A$/i } })
+
+db.Customers.find({ name: { $regex: /A/i } })

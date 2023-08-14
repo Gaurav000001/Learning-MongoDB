@@ -1,0 +1,20 @@
+**Problem 7:**
+
+- **Prerequisite**: Understand how to order data in SQL / MongoDB
+- **Problem**: Write a query to fetch all customers, ordered by **`name`** in descending order.
+
+*********************   Compass   **********************
+Inside "Sort" input box
+
+{name: -1}
+
+{name: 1}
+
+*******************   MongoDB Shell   **********************
+## Descending
+
+db.Customers.find({}).sort({name: -1})
+
+## Ascending
+
+db.Customers.find({}).sort({name: 1})

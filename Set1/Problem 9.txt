@@ -1,0 +1,15 @@
+**Problem 9:**
+
+- **Prerequisite**: Understand how to limit results in SQL / MongoDB
+- **Problem**: Write a query to fetch the top 3 customers when ordered by **`id`** in ascending order.
+
+
+
+
+
+
+db.Customers.find({}).sort({_id: 1}).limit(3)
+
+# This also works in MongoDB
+
+db.Customers.find({}).sort({_id: 1}).limit(2, 3)

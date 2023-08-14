@@ -1,0 +1,19 @@
+**Problem 12:**
+
+- **Prerequisite**: Understand how to skip rows / documents in SQL / MongoDB
+- **Problem**: Write a query to fetch all customers except the first two when ordered by **`id`** in ascending order.
+
+
+********* MySQL **********
+NOTE: Compulsory to use LIMIT before OFFSET else will encounter error
+NOTE: LIMIT 18446744073709551615 sets an arbitrarily large limit to ensure all remaining rows are included.
+
+SELECT * FROM Customer
+ORDER BY customer_id ASC
+LIMIT 18446744073709551615 OFFSET 2;
+
+
+
+************ MongoDB *************
+
+db.Customers.find({}).sort({_id: 1}).skip(2)

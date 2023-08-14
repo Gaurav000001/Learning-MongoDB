@@ -1,0 +1,24 @@
+**Problem 4:**
+
+- **Prerequisite**: Understand how to select specific fields in SQL / MongoDB
+- **Problem**: Write a query to select only the **`name`** and **`email`** fields for all customers.
+
+
+
+*********************   Compass   **********************
+Inside "Project" input box
+
+{name: 1, email: 1, _id: 0}
+
+
+
+*******************   MongoDB Shell   **********************
+db.Customers.find({}, {name: 1, email: 1, _id: 0})
+
+
+db.Customers.find({}) retrieves all documents in the "Customers" collection.
+The second parameter { name: 1, email: 1, _id: 0 } is the projection parameter, where:
+   * name: 1 includes the "name" field in the result.
+   * email: 1 includes the "email" field in the result.
+   * _id: 0 excludes the default "_id" field from the result. The "_id" field is automatically 
+     included by default, but setting it to 0 excludes it.

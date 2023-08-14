@@ -1,0 +1,25 @@
+**Problem 2:**
+
+- **Prerequisite**: Understand inserting data into SQL tables / MongoDB collections
+- **Problem**: Insert five rows / documents into the **`Customers`** table / collection with data of your choice.
+
+
+*********************   Compass   **********************
+[
+    {"_id": 1, "name": "Gaurav", "email": "gangulygaurav166@gmail.com", "address": "Chandrapur", "phone_number": "3545673534"},
+    {"_id": 2, "name": "Monu", "email": "monu@gmail.com", "address": "Amravati", "phone_number": "4345564346"},
+    {"_id": 3, "name": "Prajay", "email": "prajay@gmail.com", "address": "Delhi"},
+    {"_id": 4, "name": "Bhalerao", "email": "bhalerao@gmail.com", "address": "Raipur", "phone_number": "4565343555"},
+    {"_id": 5, "name": "Prajapati", "email": "prajapati@gmail.com", "address": "Pune", "phone_number": null}
+]
+
+*******************   MongoDB Shell   **********************
+db.Customers.insertMany(
+    [
+        {_id: 1, name: "Gaurav", email: "gangulygaurav166@gmail.com", address: "Chandrapur", phone_number: "3545673534"},
+        {_id: 2, name: "Monu", email: "monu@gmail.com", address: "Amravati", phone_number: "4345564346"},
+        {_id: 3, name: "Prajay", email: "prajay@gmail.com", address: "Delhi"},
+        {_id: 4, name: "Bhalerao", email: "bhalerao@gmail.com", address: "Raipur", phone_number: "4565343555"},
+        {_id: 5, name: "Prajapati", email: "prajapati@gmail.com", address: "Pune", phone_number: null}
+    ]
+)

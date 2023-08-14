@@ -1,0 +1,8 @@
+**Problem 10:**
+
+- **Prerequisite**: Understand data deletion in SQL / MongoDB
+- **Problem**: Write a query to delete the customer with **`id`** 2.
+
+
+
+db.Customers.deleteOne({_id: ObjectId("64d9cde7321d067f0e57eb29")})

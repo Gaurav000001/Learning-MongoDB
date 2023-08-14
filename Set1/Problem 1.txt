@@ -1,0 +1,9 @@
+**Problem 1:**
+
+- **Prerequisite**: Understand creating tables in SQL / collections in MongoDB
+- **Problem**: Create a **`Customers`** table / collection with the following fields: **`id`** (unique identifier), 
+**`name`**, **`email`**, **`address`**, and **`phone_number`**.
+
+
+
+NA
