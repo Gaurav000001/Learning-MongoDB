@@ -1,0 +1,36 @@
+**Problem 30:**
+
+- **Prerequisite**: Understand how to use the AVG function in SQL / MongoDB's aggregate functions
+- **Problem**: Write a query to calculate the average **`ride_time`** of all rides.
+
+
+
+db.Rides.aggregate(
+    [
+        {
+            $group: {
+                _id: null,
+                averageRideTime: {$avg: "$ride_time"}
+            }
+        }
+    ]
+)
+
+
+db.Rides.aggregate(
+    [
+        {
+            $group: {
+                _id: null,
+                totalRideTime: {$sum: "$ride_time"},
+                rides: {$sum: 1}
+            }
+        },
+        {
+            $project: {
+                _id: 0,
+                averageRideTime: {$divide: ["$totalRideTime", "$rides"]}
+            }
+        }
+    ]
+)

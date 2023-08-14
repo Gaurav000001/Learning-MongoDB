@@ -1,0 +1,20 @@
+**Problem 29:**
+
+- **Prerequisite**: Understand using math operations in SQL / MongoDB
+- **Problem**: Write a query to calculate the total **`distance`** and total **`fare`** for all rides.
+
+
+
+db.Rides.aggregate(
+    [
+        {
+            $group: {
+                _id: null,
+                totalDistance: {$sum: "$distance"},
+                totalFare: {$sum: "$fare"}
+            }
+        }
+    ]
+)
+
+

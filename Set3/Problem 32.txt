@@ -1,0 +1,11 @@
+**Problem 32:**
+
+- **Prerequisite**: Understand how to use the COUNT function in SQL / MongoDB's aggregate functions
+- **Problem**: Write a query to count the number of rides for a given **`driver_id`**.
+
+
+
+
+db.Rides.countDocuments({
+    driver_id: 101
+})

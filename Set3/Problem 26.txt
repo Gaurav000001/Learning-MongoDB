@@ -1,0 +1,7 @@
+**Problem 26:**
+
+- **Prerequisite**: Understand creating tables in SQL / collections in MongoDB
+- **Problem**: Create a **`Rides`** table / collection with the fields defined above.
+
+
+NA

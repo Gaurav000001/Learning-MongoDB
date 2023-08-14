@@ -1,0 +1,15 @@
+**Problem 31:**
+
+- **Prerequisite**: Understand using string patterns in SQL (LIKE clause) / using regex in MongoDB
+- **Problem**: Write a query to fetch all rides whose **`start_location`** or **`end_location`** contains 'Downtown'.
+
+
+
+db.Rides.find(
+    {
+        $or: [
+            {start_location: /Downtown/i},
+            {end_location: /Downtown/i}
+        ]
+    }
+)

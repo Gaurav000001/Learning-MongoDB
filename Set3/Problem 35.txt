@@ -1,0 +1,11 @@
+**Problem 35:**
+
+- **Prerequisite**: Understand data deletion in SQL / MongoDB
+- **Problem**: Write a query to delete the ride with **`id`** 2.
+
+
+
+
+db.Rides.deleteOne({
+    _id: ObjectId("64da50cabb6884b6af191404")
+})

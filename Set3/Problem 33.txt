@@ -1,0 +1,11 @@
+**Problem 33:**
+
+- **Prerequisite**: Understand data updating in SQL / MongoDB
+- **Problem**: Write a query to update the **`fare`** of the ride with **`id`** 4.
+
+
+
+db.Rides.updateOne(
+    { _id: ObjectId("64da50cabb6884b6af191404") },
+    { $set: {fare: 33.5}}
+)
